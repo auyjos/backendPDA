@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "f818dc47-a463-4966-bcb8-af0d1f5aed9e",
+		"name": "backendPDA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25799555"
+	},
+	"item": [
+		{
+			"name": "Listar todos los productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/products?name=Bryana&page=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bryana",
+							"description": "Busqueda fuzzy de nombre de producto"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar producto por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/product/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar nuevo producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Teclado Inalámbrico",
+							"description": "nombre (requerido)",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Teclado con 2.4 ghz de conexión",
+							"description": "descripción de producto (requerido)",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "",
+							"description": "decimal",
+							"type": "text"
+						},
+						{
+							"key": "price_sale",
+							"value": "",
+							"description": "decimal",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "",
+							"description": "entero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/product",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/product/50?name=Samsung S22",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"50"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Samsung S22",
+							"description": "string"
+						},
+						{
+							"key": "description",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "brand",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "price_sale",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "stock",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar producto por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/product/50",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"50"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
